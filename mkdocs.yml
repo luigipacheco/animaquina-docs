@@ -1,11 +1,47 @@
 site_name: Animaquina
 site_url: https://www.animaquina.com
+
 theme:
   name: material
-  logo: assets/logo.png
+  font:
+    text: Ubuntu
   palette:
     scheme: slate
     primary: black
     accent: deep orange
-extra_css:
-  - stylesheets/extra.css
+  logo: assets/logo.svg
+  favicon: assets/favicon.ico
+
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+
+# extra:
+#   social:
+#     - icon: simple/youtube
+#       link: https://youtube.com/@codedvoxels
+#     - icon: simple/linkedin
+#       link: https://linkedin.com/in/luis-arturo-pacheco-16970a71
+#     - icon: simple/instagram
+#       link: https://www.instagram.com/animaquina_/
+
+
+copyright: Copyright &copy; 2025 Luis Pacheco
